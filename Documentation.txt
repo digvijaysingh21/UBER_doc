@@ -24,3 +24,23 @@ and to run "npm run dev" in terminal
 to stop the server "ctrl + c"
 
 to restart "Use "rs" to Restart the Server"
+
+
+
+1. Configure Global User Information
+To set the username and email for all repositories on your machine, use the following commands. These settings will apply to all repositories you work with on your local machine:
+
+bash
+Copy
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+Replace "Your Name" with your actual name, and "your.email@example.com" with your email address.
+
+2. Configure Local User Information (for a specific repository)
+If you need different user information for a specific repository (for example, if you use one email for work and another for personal projects), navigate to the repository directory in your terminal and run the following commands:
+
+bash
+Copy
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
+This will configure your username and email only for the current repository. The --global flag will not be used in this case, which means it will override the global configuration for this specific repo.
