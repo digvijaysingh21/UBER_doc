@@ -1,0 +1,26 @@
+backend setup
+
+npm init -y
+
+npm i express
+
+npm i dotenv cors
+
+
+in package.json file instead of "main": "index.js", we have to write "main": "server.js",
+
+npx nodemon or if it does not work try this npm install --save-dev nodemon
+
+then 
+
+inside package.json add this "dev": "nodemon app.js" inside scripts
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+
+and to run "npm run dev" in terminal
+
+to stop the server "ctrl + c"
+
+to restart "Use "rs" to Restart the Server"
