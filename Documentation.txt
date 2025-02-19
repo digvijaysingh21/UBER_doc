@@ -44,3 +44,13 @@ Copy
 git config user.name "Your Name"
 git config user.email "your.email@example.com"
 This will configure your username and email only for the current repository. The --global flag will not be used in this case, which means it will override the global configuration for this specific repo.
+
+
+//for data base
+npm i mongoose
+
+//for hashed password and comparing
+npm i bcrypt
+
+//for tokens
+npm i jsonwebtoken
