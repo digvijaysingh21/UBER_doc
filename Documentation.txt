@@ -54,3 +54,8 @@ npm i bcrypt
 
 //for tokens
 npm i jsonwebtoken
+
+// express-validator is a popular library used in Express.js applications for validating and sanitizing incoming request data. 
+// It is particularly helpful when you need to ensure that the data sent to your server (via form submissions, API requests, etc.)
+// meets certain criteria before processing it.
+npm i express-validator 
