@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+
+//connect to the database
 function connectToDb(){
     mongoose.connect(process.env.DB_CONNECT,
         ).then(() => {
@@ -7,4 +9,6 @@ function connectToDb(){
     }).catch(err => console.log(err));
 }
 
+
+//export the function
 module.exports = connectToDb;

@@ -1,9 +1,11 @@
+// Import the required modules
 const mongoose = require('mongoose');
-
+// Import the bcrypt module
 const bcrypt = require('bcrypt');
-
+// Import the jsonwebtoken module
 const jwt = require('jsonwebtoken');
 
+//create the user schema
 const userSchema = new mongoose.Schema({
     fullname: {
         firstname: {
@@ -24,6 +26,7 @@ const userSchema = new mongoose.Schema({
         minlength: [6, 'Email must be at least 6 characters long']
 
     },
+
 /**
  * @param select: false
 * This is an important security feature. When select is set to false, the password field will be excluded from query results by default.
@@ -40,19 +43,26 @@ const userSchema = new mongoose.Schema({
     }
 })
 
+//generate the auth token
 userSchema.methods.generateAuthToken = function(){
+    //generate a token
   const token = jwt.sign({_id: this._id}, process.env.JWT_SECRET);  
   return token;
 }
 
+//compare the password
 userSchema.methods.comparePassword =async function(password){
+    //compare the password
     return await bcrypt.compare(password, this.password);
 }
 
+//hash the password
 userSchema.statics.hashPassword = async function(password){
     return await bcrypt.hash(password, 10);
 }
 
+//create the user model
 const userModel = mongoose.model('user', userSchema);
 
+//export the user model
 module.exports = userModel;
