@@ -59,3 +59,10 @@ npm i jsonwebtoken
 // It is particularly helpful when you need to ensure that the data sent to your server (via form submissions, API requests, etc.)
 // meets certain criteria before processing it.
 npm i express-validator 
+
+
+//middleware to interact with cookie
+
+//cookie-parser is a middleware for Express.js that parses cookies attached to the client request. 
+//It makes it easier to read and manipulate cookies in a Node.js application.
+npm i cookie-parser

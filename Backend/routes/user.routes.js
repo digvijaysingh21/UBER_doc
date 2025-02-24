@@ -8,6 +8,8 @@ const {body} = require('express-validator');
 
 //import the user controller
 const userController = require('../controllers/user.controller');
+//import the auth middleware
+const authMiddleware = require('../middleware/auth.middleware');
 
 //register route
 router.post('/register', [
@@ -34,6 +36,12 @@ router.post('/login',[
 //call the login controller
 userController.loginUser
 )
+
+//profile route
+router.get('/profile', authMiddleware.authUser,userController.getUserProfile)
+
+//logout route
+router.get('/logout', authMiddleware.authUser, userController.logoutUser)
 
 //export the router
 module.exports = router;
