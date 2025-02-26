@@ -9,11 +9,14 @@ const cors = require('cors');
 const app = express();
 // Import the cookie-parser package
 const cookieParser = require('cookie-parser');
-// Import the user routes
-const userRoutes = require('./routes/user.routes');
 // Import the connectToDb function
 // Connect to the database
 const connectToDb = require('./db/db');
+// Import the user routes
+const userRoutes = require('./routes/user.routes');
+//import the captain routes
+const captainRoutes = require('./routes/captain.routes');
+
 connectToDb();
 
 // Use the cors package
@@ -34,6 +37,9 @@ app.get('/',(req,res) =>{
 
 // Define the user routes
 app.use('/users', userRoutes);
+
+//define the captain routes
+app.use('/captains', captainRoutes);
 
 // Export the app
 module.exports = app;

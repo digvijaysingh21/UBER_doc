@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const bcrypt = require('bycrypt');
-const jwt = require('jsonwebtken');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const captainSchema = new mongoose.Schema({
     fullname:{

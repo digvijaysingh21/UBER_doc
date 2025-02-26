@@ -66,3 +66,7 @@ npm i express-validator
 //cookie-parser is a middleware for Express.js that parses cookies attached to the client request. 
 //It makes it easier to read and manipulate cookies in a Node.js application.
 npm i cookie-parser
+
+
+//flow 
+MODELS -> Controller->ROUTES -> app.js ->Service -> ->
