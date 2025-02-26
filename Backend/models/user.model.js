@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
+        // match: [/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/, 'Please fill a valid email address'],
         minlength: [6, 'Email must be at least 6 characters long']
 
     },
