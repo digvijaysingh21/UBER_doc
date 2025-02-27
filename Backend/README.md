@@ -218,3 +218,98 @@ Returns a success message confirming that the user has been logged out.
 Input validation for both endpoints is implemented using express-validator in user.routes.js.
 Password hashing and JWT token generation are handled in user.model.js.
 The business logic for user creation and authentication is encapsulated within user.service.js and user.controller.js. ```
+
+
+# Captain Registration Endpoint
+
+## Endpoint
+**POST** `/register`
+
+> _Note: This endpoint is defined in the captain routes and is typically mounted under a specific path (e.g., `/captains/register`). Adjust the base path if needed._
+
+## Description
+This endpoint registers a new captain. It accepts captain personal details along with vehicle information. All fields are required.
+
+## Request Body
+
+| Field                       | Type    | Required | Description                                                            |
+| --------------------------- | ------- | -------- | ---------------------------------------------------------------------- |
+| fullname                    | Object  | Yes      | An object containing the captain's name details                        |
+| ├─ firstname                | String  | Yes      | Must be at least 3 characters long                                     |
+| └─ lastname                 | String  | No       | Optional last name                                                     |
+| email                       | String  | Yes      | Must be a valid email address                                          |
+| password                    | String  | Yes      | Must be at least 6 characters long                                     |
+| vehicle                     | Object  | Yes      | An object containing the captain's vehicle details                     |
+| ├─ color                   | String  | Yes      | Vehicle color; must be at least 3 characters long                      |
+| ├─ plate                   | String  | Yes      | Vehicle plate; must be at least 3 characters long                      |
+| ├─ capacity                | Number  | Yes      | Vehicle capacity; must be an integer (minimum value 1)                 |
+| └─ vehicleType             | String  | Yes      | Must be either `car` or `motorcycle`                                   |
+
+## Request Example
+
+```json
+{
+  "fullname": {
+    "firstname": "Alice",
+    "lastname": "Smith"
+  },
+  "email": "alice.smith@example.com",
+  "password": "securepass123",
+  "vehicle": {
+    "color": "red",
+    "plate": "ABC123",
+    "capacity": 4,
+    "vehicleType": "car"
+  }
+}
+```
+
+# Example Response
+Success: 201 Created
+On successful registration, the server returns the created captain's data. (Sensitive data such as the password should not be returned.)
+
+```json
+{
+  "captain": {
+    "_id": "captain_id",
+    "fullname": {
+      "firstname": "Alice",
+      "lastname": "Smith"
+    },
+    "email": "alice.smith@example.com",
+    "vehicle": {
+      "color": "red",
+      "plate": "ABC123",
+      "capacity": 4,
+      "vehicleType": "car"
+    }
+  }
+}
+```
+
+
+# Error: 400 Bad Request
+If any field is missing or fails validation, the server responds with a 400 status code and error details.
+
+```json
+{
+  "errors": [
+    {
+      "msg": "Invalid Email",
+      "param": "email",
+      "location": "body"
+    },
+    {
+      "msg": "First name must be 3 characters long",
+      "param": "fullname.firstname",
+      "location": "body"
+    }
+    // ... additional validation errors
+  ]
+}
+```
+## Additional Information
+
+Input validation is implemented using express-validator in captain.routes.js.
+The business logic for captain creation is encapsulated in captain.service.js.
+Ensure all required fields are provided to successfully register a captain.
