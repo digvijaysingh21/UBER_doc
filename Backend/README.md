@@ -277,6 +277,7 @@ On successful registration, the server returns the created captain's data. (Sens
       "lastname": "Smith"
     },
     "email": "alice.smith@example.com",
+    "password" : "here will be password while registering",
     "vehicle": {
       "color": "red",
       "plate": "ABC123",
