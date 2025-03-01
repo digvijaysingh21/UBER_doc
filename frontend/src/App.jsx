@@ -8,7 +8,7 @@ import CaptainSignup from "./pages/CaptainSignUp";
 
 const App = () => {
   return (
-    <div className="bg-red-700">
+    <div>
       <Routes>
         {/* user path */}
         <Route path='/' element={ <Home/>}/>
