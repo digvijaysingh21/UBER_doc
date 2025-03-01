@@ -121,3 +121,7 @@ export default defineConfig({
 //})
 
 //then add this in index.js @import "tailwindcss";
+
+
+//install react router dom
+npm i react-router-dom
