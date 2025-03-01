@@ -70,3 +70,54 @@ npm i cookie-parser
 
 //flow 
 MODELS -> Controller->ROUTES -> app.js ->Service -> ->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//frontend set up 
+install frontend folder using vite
+npm create vite@latest
+the select react
+then select project name as frontend
+then select javascript
+
+to run npm run dev
+
+//for styling install tailwindcss for vite
+npm install tailwindcss @tailwindcss/vite
+
+//addd this is vite config
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+//import { defineConfig } from 'vite'
+//import react from '@vitejs/plugin-react'
+//import tailwindcss from '@tailwindcss/vite'
+
+
+// https://vite.dev/config/
+//export default defineConfig({
+  //plugins: [react(), tailwindcss()],
+//})
+
+//then add this in index.js @import "tailwindcss";
