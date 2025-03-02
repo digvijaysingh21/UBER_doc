@@ -27,7 +27,7 @@ const UserLogin = () => {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className='bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg placeholder:text-base' 
+            className='bg-[#eeeeee] mb-7 rounded-lg px-4 py-2 border-0 w-full text-lg placeholder:text-base' 
             type="email" 
             placeholder='email@example.com'
         />
@@ -36,11 +36,11 @@ const UserLogin = () => {
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className='bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg placeholder:text-base' 
+            className='bg-[#eeeeee] mb-7 rounded-lg px-4 py-2 border-0 w-full text-lg placeholder:text-base' 
             type="password" 
             placeholder='password'/>
         <button
-            className='bg-[#111] text-white font-semibold mb-3 rounded px-4 py-2 border w-full text-lg placeholder:text-base' 
+            className='bg-[#111] text-white font-semibold mb-3 rounded-lg px-4 py-2 border w-full text-lg placeholder:text-base' 
         >Login</button>
          <p className='text-center'>New here? <Link to='/signup' className='text-blue-600'>Create new Account</Link>
          </p>
@@ -49,7 +49,7 @@ const UserLogin = () => {
     <div>
     <Link
     to='/captain-login'
-      className='bg-[#10b461] flex item-center justify-center text-white font-semibold mb-5 rounded px-4 py-2 border w-full text-lg placeholder:text-base' 
+      className='bg-[#10b461] flex item-center justify-center text-white font-semibold mb-5 rounded-lg px-4 py-2 border w-full text-lg placeholder:text-base' 
 
     >
         Sign in as Captain
