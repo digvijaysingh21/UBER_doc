@@ -16,7 +16,7 @@ const UserSignup = () => {
         })
         
         // console.log(email, password);
-        console.log(userData);
+        // console.log(userData);
         setUserData({
             username:{
                 firstName: firstName,
@@ -84,8 +84,8 @@ const UserSignup = () => {
                 </form>
             </div>
             <div>
-               <p className='text-[8px] leading-tight'>
-                By proceeding, you consent to get calls, whatsApp or SMS messages, including by automated means, from Uber and its affiliates to the number provided
+            <p className='text-[8px] leading-tight'>
+                This site is protected by reCAPTCHA and the <span className='underline'> Google Privacy Policy </span>and  <span className='underline'>Terms of Service apply</span>.
                 </p>
             </div>
         </div>
