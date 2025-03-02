@@ -18,7 +18,7 @@ const CaptainSignup = () => {
             // console.log(email, password);
             // console.log(userData);
             setUserData({
-                username:{
+                fullName:{
                     firstName: firstName,
                     lastName: lastName
                 },
@@ -32,13 +32,13 @@ const CaptainSignup = () => {
         }
 
     return (
-        <div className="p-7 h-screen flex flex-col justify-between">
+        <div className="py-5 px-5 h-screen flex flex-col justify-between">
             <div>
             <img className='w-16 mb-3 rounded-[2rem]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjYjyprCeZ5cP2NZgN1phnikNi57xECVfPMw&s"/> 
             <form onSubmit={submitHandler}>
 
 
-                    <h3 className="text-lg font-medium mb-2">What's your name</h3>
+                    <h3 className="text-lg w-full font-medium mb-2">What's our Captain's name</h3>
                     <div className='flex gap-4 mb-6'>
 
                         <input
@@ -59,7 +59,7 @@ const CaptainSignup = () => {
                         />
                     </div>
 
-                    <h3 className="text-lg font-medium mb-2">What's your email</h3>
+                    <h3 className="text-lg font-medium mb-2">What's our Captain's email</h3>
                     <input
                         required
                         className='bg-[#eeeeee] mb-6 rounded-lg px-4 py-2 border-0 w-full text-lg placeholder:text-lg'
