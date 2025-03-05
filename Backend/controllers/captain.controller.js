@@ -44,9 +44,6 @@ module.exports.registerCaptain = async (req, res, next) => {
     res.status(201).json({token, captain});
 }
 
-
-
-
 module.exports.loginCaptain = async (req, res, next) => {
     //error handling
     const errors = validationResult(req);
