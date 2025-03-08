@@ -125,3 +125,8 @@ export default defineConfig({
 
 //install react router dom
 npm i react-router-dom
+
+
+//for animation
+npm install gsap
+npm install @gsap/react
