@@ -130,3 +130,6 @@ npm i react-router-dom
 //for animation
 npm install gsap
 npm install @gsap/react
+
+//for icon 
+npm install remixicon --save
